@@ -4,7 +4,7 @@ This plugin enables the interaction with the TWS-API of Interactive Brokers
 
 ## Installation
 
-
+```
 $ bundle add bridgetown-ib-ruby
 ```
 
