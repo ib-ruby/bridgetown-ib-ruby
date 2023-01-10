@@ -18,9 +18,9 @@ module BridgetownIbRuby
   end
 end
 Bridgetown.initializer :"bridgetown-ib-ruby" do | config |
-   IB::Gateway.new( **BridgetownIbRuby.gateway_configuration( config ) ) do |gw|
+   IB::Gateway.new **BridgetownIbRuby.gateway_configuration(config) do |gw|
     # to do: subscribe to news , too
-  gw.tws.subscribe( :Alert, :ManagedAccounts ){ | msg | gw.tws.logger.info  msg.to_human  }
+  gw.tws.subscribe( :Alert, :ManagedAccounts ){ | msg | gw.tws.logger.info msg.to_human }
   gw.logger.level =  Logger::INFO
   end
 end
