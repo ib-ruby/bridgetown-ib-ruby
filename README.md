@@ -39,8 +39,10 @@ Bridgetown depends on the outdated `terminal-table` Version 1.8. IB-Ruby uses fe
 the actual version in the `.as_table`-method. This is not available for now. Just use the 
 fallback `.to_human`.
 
+## Additional Infos
+There is a blog entry on [topofocus.de](https://topofocus.de) (in german):  https://topofocus.de/blog/bridgtown-plugin/
 
-## Testing
+## Testing phase
 
 The Gem is not released (jet).
 
