@@ -8,7 +8,7 @@ This plugin enables the interaction with the TWS-API of Interactive Brokers
 $ bundle add bridgetown-ib-ruby
 ```
 
-Then add a file `tws.yml` to the config directory.
+Then add a file `tws.yml` to the config directory. This is an example:
 
 ```
 # TWS/Gateway
@@ -28,6 +28,20 @@ watchlists:
 :client_id: 2001
 
 ```
+
+## Include in the Initializer
+
+The Bridgetown-Initializer parses `config/initializers` for each environment. If the console (`bin/bt c`) is run,
+the file is parsed once. If the development-server is used (`bin/bt s`) the initializer is parsed to render static pages
+and once again in server-mode. We have to prevent the first run:
+
+```ruby 
+# in config/initialisers.rb
+only :server, :console do
+    init :"bridgetown-ib-ruby"
+end
+```
+
 
 
 `IB::Gateway`-methods are present via `IB::Gateway.current`.
