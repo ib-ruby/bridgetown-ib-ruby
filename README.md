@@ -42,7 +42,7 @@ only :server, :console do
 end
 ```
 
-
+## Access ib-ruby-Objects
 
 `IB::Gateway`-methods are present via `IB::Gateway.current`.
 To rely on [ib-api](https://github.com/ib-ruby/ib-api) the `IB::Connection`-object is present via `IB::Connection.current`.  
