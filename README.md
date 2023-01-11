@@ -44,9 +44,12 @@ end
 
 ## Access ib-ruby-Objects
 
-`IB::Gateway`-methods are present via `IB::Gateway.current`.
+`IB::Gateway`-methods are present via `IB::Gateway.current`.  
 To rely on [ib-api](https://github.com/ib-ruby/ib-api) the `IB::Connection`-object is present via `IB::Connection.current`. 
-IB::Symbols - Watchlists are present as well as enhanced order-types ( IB::Limit.order, IB::Stop.order ...)
+
+IB::Contracts (IB::Stock,  IB::Option, IB::Future, IB::Forex, ...) and IB::Spreads (IB::Strangle, IB::Straddle, IB::Calendar ...)
+are available.
+IB::Symbols and  Watchlists are present as well as enhanced order-types ( IB::Limit.order, IB::Stop.order ...)
 
 ## Limitations
 
