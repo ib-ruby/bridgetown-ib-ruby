@@ -42,6 +42,8 @@ only :server, :console do
 end
 ```
 
+If IB-Ruby-Objects should be present in `server` and `static` mode, **omit the setting of client_id**. Then `IB::Connection`
+connects with an arbitrary client-id and `Bridgetown` runs two instances of the software.
 
 
 `IB::Gateway`-methods are present via `IB::Gateway.current`.
@@ -56,15 +58,7 @@ fallback `.to_human`.
 ## Additional Infos
 There is a blog entry on [topofocus.de](https://topofocus.de) (in german):  https://topofocus.de/blog/bridgtown-plugin/
 
-## Testing phase
 
-The Gem is not released (jet).
-
-To include the plugin, first clone this repository include it via `path` and    
-modify `Gemfile`:
-```
-gem "bridgetown-ib-ruby", path: "../bridgetown-ib-ruby"
-```
 
 ## Contributing
 

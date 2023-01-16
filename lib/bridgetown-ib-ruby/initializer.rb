@@ -20,7 +20,7 @@ module BridgetownIbRuby
   end
 
   def self.log_writer
-    Bridgetown::LogWriter.new #.tap(&:enable_prefix)
+    Bridgetown::LogWriter.new.tap(&:enable_prefix)
   end
 end
 
@@ -28,7 +28,6 @@ Bridgetown.initializer :"bridgetown-ib-ruby" do | config |
    begin
      BridgetownIbRuby.the_gateway( config ) 
    rescue IB::TransmissionError, Errno::ECONNRESET => e
-     puts e.inspect
      puts "END Through Error"
    end
 end
