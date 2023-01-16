@@ -45,9 +45,14 @@ end
 If IB-Ruby-Objects should be present in `server` and `static` mode, **omit the setting of client_id**. Then `IB::Connection`
 connects with an arbitrary client-id and `Bridgetown` runs two instances of the software.
 
+## Access ib-ruby-Objects
 
-`IB::Gateway`-methods are present via `IB::Gateway.current`.
-To rely on [ib-api](https://github.com/ib-ruby/ib-api) the `IB::Connection`-object is present via `IB::Connection.current`.  
+`IB::Gateway`-methods are present via `IB::Gateway.current`.  
+To rely on [ib-api](https://github.com/ib-ruby/ib-api) the `IB::Connection`-object is present via `IB::Connection.current`. 
+
+IB::Contracts (IB::Stock,  IB::Option, IB::Future, IB::Forex, ...) and IB::Spreads (IB::Strangle, IB::Straddle, IB::Calendar ...)
+are available.
+IB::Symbols and  Watchlists are present as well as enhanced order-types ( IB::Limit.order, IB::Stop.order ...)
 
 ## Limitations
 
