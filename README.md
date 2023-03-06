@@ -13,15 +13,14 @@ Then add a file `tws.yml` to the config directory. This is an example:
 ```
 # TWS/Gateway
 #
-# Its assumed, that the TWS/IbGateway is running on localhost.
-# Enter Port values 
-#  4001/7696  for active accounts
-#  4002/7697 for demo accounts
+# Enter Port values as part of the `host`-entry:
+#  4001/7496  for active accounts
+#  4002/7497 for demo account
 ---
-get_account_data:  true
-serial_array: false
-port: 4002
-watchlists: 
+:get_account_data:  true
+:serial_array: false
+:host: localhost:4002
+:watchlists: 
  - :Spreads
  - :Stillhalter
  - :BuyAndHold 
@@ -54,11 +53,6 @@ IB::Contracts (IB::Stock,  IB::Option, IB::Future, IB::Forex, ...) and IB::Sprea
 are available.
 IB::Symbols and  Watchlists are present as well as enhanced order-types ( IB::Limit.order, IB::Stop.order ...)
 
-## Limitations
-
-Bridgetown depends on the outdated `terminal-table` Version 1.8. IB-Ruby uses features of 
-the actual version in the `.as_table`-method. This is not available for now. Just use the 
-fallback `.to_human`.
 
 ## Additional Infos
 There is a blog entry on [topofocus.de](https://topofocus.de) (in german):  https://topofocus.de/blog/bridgtown-plugin/
